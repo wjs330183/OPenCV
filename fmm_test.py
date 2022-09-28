@@ -1,13 +1,13 @@
 import cv2 as cv
 import numpy as np
 
-path = "/Users/json/Downloads/image/Sat Apr 30 14-00-28 2022 _1.jpg"
+path = "/Users/json/Downloads/1731660292262.jpg"
 
 img = cv.imread(path)
 hight, width, depth = img.shape[0:3]
 
 #图片二值化处理，把[240, 240, 240]~[255, 255, 255]以外的颜色变成0
-thresh = cv.inRange(img, np.array([0, 0, 0]), np.array([130, 130, 130]))
+thresh = cv.inRange(img, np.array([0, 0, 0]), np.array([50, 50, 50]))
 
 #创建形状和尺寸的结构元素
 #kernel为一个5x5的，元素均为1，类型为uint8的矩阵
